@@ -554,6 +554,14 @@ video {
   display: none;
 }
 
+.font-poppins {
+  font-family: Poppins, sans-serif;
+}
+
+.font-roboto {
+  font-family: Roboto, sans-serif;
+}
+
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -563,6 +571,74 @@ video {
   font-weight: 700;
 }
 
+.font-medium {
+  font-weight: 500;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
 .underline {
   text-decoration-line: underline;
+}
+
+@font-face {
+  font-family: "Poppins";
+
+  src: url("../assets/fonts/poppins-regular.woff2") format("woff2");
+
+  font-weight: 400;
+
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+
+  src: url("../assets/fonts/poppins-medium.woff2") format("woff2");
+
+  font-weight: 500;
+
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+
+  src: url("../assets/fonts/poppins-bold.woff2") format("woff2");
+
+  font-weight: 700;
+
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+
+  src: url("../assets/fonts/roboto-light.woff2") format("woff2");
+
+  font-weight: 300;
+
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+
+  src: url("../assets/fonts/roboto-regular.woff2") format("woff2");
+
+  font-weight: 400;
+
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+
+  src: url("../assets/fonts/roboto-medium.woff2") format("woff2");
+
+  font-weight: 500;
+
+  font-style: normal;
 }

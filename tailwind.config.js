@@ -2,7 +2,12 @@
 module.exports = {
   content: ["./**/*.{html,js}", "!./node_modules", "!./dist"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+        roboto: ["Roboto", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };
