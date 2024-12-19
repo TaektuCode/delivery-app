@@ -1,0 +1,13 @@
+{
+  "name": "delivery-app",
+  "version": "1.0.0",
+  "description": "deliver app",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "tailwindcss -i ./css/input.css -o ./css/style.css --minify",
+    "watch-css": "tailwindcss -i ./css/input.css -o ./css/style.css --watch"
+  },
+  "dependencies": {
+    "tailwindcss": "^3.4.16"
+  }
+}
