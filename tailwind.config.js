@@ -7,6 +7,9 @@ module.exports = {
         poppins: ["Poppins", "sans-serif"],
         roboto: ["Roboto", "sans-serif"],
       },
+      colors: {
+        "deep-green": "rgb(47, 106, 75)", // Adding Deep Green color
+      },
     },
   },
   plugins: [],

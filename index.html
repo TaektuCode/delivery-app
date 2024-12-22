@@ -8,9 +8,54 @@
     <script src="./js/db.js"></script>
     <script src="./js/template.js"></script>
     <script src="./js/script.js"></script>
-    <title>Balance Bowls</title>
+    <title>Harvest To Go</title>
   </head>
   <body>
-    <h1 class="text-3xl font-roboto font-bold underline">Hello world!</h1>
+    <div class="flex flex-col min-h-screen">
+      <!-- Header -->
+      <header
+        class="flex justify-center items-center bg-deep-green text-white h-16"
+      >
+        <h1 class="text-4xl font-poppins font-bold">Harvest To Go</h1>
+      </header>
+
+      <!-- Main Content -->
+      <main class="flex-1 flex">
+        <div class="flex flex-1">
+          <div class="flex-1 bg-blue-200">
+            <div class="h-52 w-full relative">
+              <img
+                class="object-cover w-full h-full"
+                src="./assets/images/daily_dishes-min.jpg"
+                alt="Picture of Food"
+              />
+
+              <img
+                class="h-24 w-24 rounded-full absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                src="./assets/balbow_logo.jpg"
+                alt="Balance Bowls Logo"
+              />
+            </div>
+            <div class="px-4 py-5">
+              <h2 class="font-poppins text-xl font-medium pb-2">
+                Balance Bowls
+              </h2>
+              <span class="font-roboto font-light"
+                >Bewertung 4.6 von 5 Sternen</span
+              >
+            </div>
+          </div>
+          <div class="w-60 bg-red-300">Warenkorb</div>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer
+        class="flex flex-col justify-center items-center bg-deep-green text-white h-16"
+      >
+        <p>Harvest To Go</p>
+        <p>&copy; Copyright</p>
+      </footer>
+    </div>
   </body>
 </html>
