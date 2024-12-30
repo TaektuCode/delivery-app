@@ -10,7 +10,7 @@
     <script src="./js/script.js"></script>
     <title>Harvest To Go</title>
   </head>
-  <body>
+  <body onload="initPage()">
     <div class="flex flex-col min-h-screen">
       <!-- Header -->
       <header
@@ -22,7 +22,7 @@
       <!-- Main Content -->
       <main class="flex-1 flex">
         <div class="flex flex-1">
-          <div class="flex-1 bg-blue-200">
+          <div class="flex-1">
             <div class="h-52 w-full relative">
               <img
                 class="object-cover w-full h-full"
@@ -43,6 +43,27 @@
               <span class="font-roboto font-light"
                 >Bewertung 4.6 von 5 Sternen</span
               >
+            </div>
+            <div class="flex justify-center">
+              <nav>
+                <a href="#" class="p-1 mr-1">Daily Dishes</a>
+                <a href="#" class="p-1 mr-1">Drinks</a>
+                <a href="#" class="p-1">Toppings</a>
+              </nav>
+            </div>
+            <div id="content" class="px-4">
+              <article class="my-2 border-b-2 border-b-deep-green">
+                <div class="flex items-center justify-between">
+                  <h2 class="font-poppins font-bold">Avocado Power Bowl</h2>
+                  <button>X</button>
+                </div>
+                <p class="font-roboto mb-2">
+                  A bowl filled with creamy avocado, quinoa, chickpeas, fresh
+                  vegetables, and a lemon-tahini dressing.
+                </p>
+                <span> 12.99 </span>
+                <span>€</span>
+              </article>
             </div>
           </div>
           <div class="w-60 bg-red-300">Warenkorb</div>
