@@ -123,4 +123,39 @@ function calculateOrder() {
     .toFixed(2);
 }
 
-// Calculate total
+// Cart toggle (small screen)
+function toggleCart() {
+  const cartContainer = document.getElementById("cart-container");
+  cartContainer.classList.toggle("hidden");
+}
+
+// Show Thank You
+function showThankYou() {
+  const thankYouMessage = document.getElementById("thankYouMessage");
+  const emptyCartMessage = document.getElementById("emptyCartMessage");
+
+  if (cart.length > 0) {
+    thankYouMessage.classList.remove("hidden"); // Show Thank You modal
+    clearCart(); // Empty the cart
+  } else {
+    emptyCartMessage.classList.remove("hidden"); // Show Empty Cart modal
+  }
+}
+
+// Clear Cart
+function clearCart() {
+  cart = []; // Reset cart array
+  renderCart(); // Re-render the cart UI
+}
+
+// Close Thank You
+function closeThankYou() {
+  const thankYouMessage = document.getElementById("thankYouMessage");
+  thankYouMessage.classList.add("hidden");
+}
+
+// Close Empty Cart Modal
+function closeEmptyCart() {
+  const emptyCartMessage = document.getElementById("emptyCartMessage");
+  emptyCartMessage.classList.add("hidden");
+}

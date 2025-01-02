@@ -36,12 +36,12 @@
                 alt="Balance Bowls Logo"
               />
             </div>
-            <div class="px-4 py-5">
+            <div class="px-4 py-5 text-center mt-6">
               <h2 class="font-poppins text-xl font-medium pb-2">
                 Balance Bowls
               </h2>
-              <span class="font-roboto font-light"
-                >Bewertung 4.6 von 5 Sternen</span
+              <span class="font-roboto font-light text-deep-green"
+                >Rating 4.6/5 Stars</span
               >
             </div>
             <div class="flex justify-center">
@@ -53,17 +53,75 @@
             </div>
             <div id="content" class="px-4 h-[420px] overflow-y-scroll"></div>
           </div>
-          <div class="w-60 max-h-[759px] flex justify-start flex-col">
-            <div
-              class="h-fit py-5 border-b-2 border-b-deep-green bg-white flex justify-center items-center text-4xl"
-            >
-              Cart
-            </div>
-            <div id="cart" class="max-h-[681px] flex-1 overflow-y-scroll"></div>
-            <div class="h-[82px] flex flex-col">
-              <span id="order" class="w-full">Order: 0€</span>
-              <span>Delivery: 5€</span>
-              <span id="total">Total: 0€</span>
+
+          <!-- Cart Section -->
+          <div
+            id="cart-container"
+            class="fixed top-0 left-0 h-full w-full hidden bg-white z-30 lg:flex lg:w-60 lg:max-h-[759px] lg:static lg:flex-col"
+          >
+            <!-- Cart Content -->
+            <div id="cart-content" class="flex flex-col w-full h-full">
+              <div
+                class="h-fit py-5 border-b-2 border-b-deep-green bg-white flex justify-center items-center text-4xl relative"
+              >
+                Cart
+                <!-- Close Button for Small Screens -->
+                <button
+                  class="absolute top-5 right-5 text-2xl font-bold lg:hidden"
+                  onclick="toggleCart()"
+                >
+                  ✕
+                </button>
+              </div>
+              <div id="cart" class="flex-1 overflow-y-scroll max-h-full"></div>
+              <div class="h-[82px] flex flex-col p-4 mb-3">
+                <span id="order" class="w-full">Order: 0€</span>
+                <span>Delivery: 5€</span>
+                <span id="total">Total: 0€</span>
+              </div>
+              <!-- Purchase Button -->
+              <button
+                class="w-fit mx-auto mb-2 items-center bg-deep-green text-white py-2 px-4 rounded"
+                onclick="showThankYou()"
+              >
+                Purchase
+              </button>
+
+              <div
+                id="thankYouMessage"
+                class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden"
+              >
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                  <h2 class="text-xl font-bold mb-4">Thank You!</h2>
+                  <p class="mb-4">
+                    We appreciate your purchase. We hope to serve you again
+                    soon!
+                  </p>
+                  <button
+                    class="bg-deep-green text-white py-2 px-4 rounded"
+                    onclick="closeThankYou()"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+
+              <!-- Empty Cart Modal -->
+              <div
+                id="emptyCartMessage"
+                class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden"
+              >
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                  <h2 class="text-xl font-bold mb-4">Cart is Empty!</h2>
+                  <p class="mb-4">Please add some items to your cart.</p>
+                  <button
+                    class="bg-deep-green text-white py-2 px-4 rounded"
+                    onclick="closeEmptyCart()"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -76,6 +134,15 @@
         <p>Harvest To Go</p>
         <p>&copy; Copyright</p>
       </footer>
+
+      <!-- Toggle Button for Small Screens -->
+      <button
+        id="cart-toggle"
+        class="w-full text-2xl bg-deep-green text-white py-3.5 fixed bottom-0 z-20 lg:hidden"
+        onclick="toggleCart()"
+      >
+        Cart
+      </button>
     </div>
   </body>
 </html>
