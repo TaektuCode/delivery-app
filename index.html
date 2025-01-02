@@ -22,7 +22,7 @@
       <!-- Main Content -->
       <main class="flex-1 flex">
         <div class="flex flex-1">
-          <div class="flex-1">
+          <div class="flex-1 border-r-4 z-10 border-r-deep-green">
             <div class="h-52 w-full relative">
               <img
                 class="object-cover w-full h-full"
@@ -51,28 +51,27 @@
                 <a href="#" class="p-1">Toppings</a>
               </nav>
             </div>
-            <div id="content" class="px-4">
-              <article class="my-2 border-b-2 border-b-deep-green">
-                <div class="flex items-center justify-between">
-                  <h2 class="font-poppins font-bold">Avocado Power Bowl</h2>
-                  <button>X</button>
-                </div>
-                <p class="font-roboto mb-2">
-                  A bowl filled with creamy avocado, quinoa, chickpeas, fresh
-                  vegetables, and a lemon-tahini dressing.
-                </p>
-                <span> 12.99 </span>
-                <span>€</span>
-              </article>
+            <div id="content" class="px-4 h-[420px] overflow-y-scroll"></div>
+          </div>
+          <div class="w-60 max-h-[759px] flex justify-start flex-col">
+            <div
+              class="h-fit py-5 border-b-2 border-b-deep-green bg-white flex justify-center items-center text-4xl"
+            >
+              Cart
+            </div>
+            <div id="cart" class="max-h-[681px] flex-1 overflow-y-scroll"></div>
+            <div class="h-[82px] flex flex-col">
+              <span id="order" class="w-full">Order: 0€</span>
+              <span>Delivery: 5€</span>
+              <span id="total">Total: 0€</span>
             </div>
           </div>
-          <div class="w-60 bg-red-300">Warenkorb</div>
         </div>
       </main>
 
       <!-- Footer -->
       <footer
-        class="flex flex-col justify-center items-center bg-deep-green text-white h-16"
+        class="flex flex-col justify-center items-center bg-deep-green text-white h-15"
       >
         <p>Harvest To Go</p>
         <p>&copy; Copyright</p>

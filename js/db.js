@@ -138,3 +138,5 @@ let dailyToppings = [
     amount: 0,
   },
 ];
+
+let cart = [];

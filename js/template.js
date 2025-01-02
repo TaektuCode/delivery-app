@@ -37,3 +37,20 @@ function getToppingsTemplate(topping, index) {
       </article>
     `;
 }
+
+function getCartTemplate(item, index) {
+  return `
+    <article class="my-2 border-b-2 border-b-gray-300">
+      <div class="flex items-center justify-between">
+        <h2 class="font-poppins font-bold">${item.name}</h2>
+        <span>${(item.price * item.amount).toFixed(2)}€</span>
+      </div>
+      <p class="font-roboto flex items-center">
+        Quantity: 
+        <button class="px-2 ml-2 bg-gray-200 rounded" onclick="updateCartItem(${index}, 'decrease')">-</button>
+        <span class="mx-2">${item.amount}</span>
+        <button class="px-2 bg-gray-200 rounded" onclick="updateCartItem(${index}, 'increase')">+</button>
+      </p>
+    </article>
+  `;
+}
